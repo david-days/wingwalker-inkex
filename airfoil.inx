@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Airfoil Import</name>
+    <id>com.siliconholler.inkscape.wingwalker-import</id>
+    <param name="dat_format" type="optiongroup" appearance="combo"     
+        gui-text="Format:">
+        <option value="selig">Selig</option>
+        <option value="lednicer">Lednicer</option>
+    </param>
+   <param name="c_len" type="float" min="10.0" max="1000" 
+        gui-text="Chord Length:">240.0</param>
+    <param name="units" type="str" gui-text="Units (mm):">mm</param>
+    <input>
+        <extension>.dat</extension>
+        <mimetype>application/x-airfoil-dat</mimetype>
+        <filetypename>AIRFOIL DAT(*.dat)</filetypename>
+        <filetypetooltip>AIRFOILS</filetypetooltip>
+    </input>
+    <script>
+        <command location="inx" interpreter="python">airfoil-import.py</command>
+    </script>
+</inkscape-extension>
